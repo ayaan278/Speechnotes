@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-----------------------------------------------------Start of Head-------------------------------------------------->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!------------------------------Start of Stylesheets----------------------------------->
+    <link href="/styles.css" rel="stylesheet">
+    <link href="/keyframes.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"/>
+  <!--------------------------------End of Stylesheets---------------------------------->
+
+  <!------------------------------Start of JavaScriptBlock------------------------------>
+    <script src="/leftMenu.js">   </script>
+    <script src="/speechRecognition.js">  </script>
+    <script src="/pageManipulate.js">  </script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="node_modules/jquery/src/jquery.js"></script>
+  <!--------------------------------End of JavaScriptBlock------------------------------>
+
+    <title>
+      Speechnotes
+    </title>
+</head>
+<!-----------------------------------------------End of Head---------------------------------------------------->
+
+<!-----------------------------------------------Start of Body---------------------------------------------------->
+<body>
+
+  <!------------------------------------Start of Top Navigation bar-------------------------------->
+  <div id="navbar">
+    <h1 href="#default" id="logo">
+      Fiphy
+    </h1>
+  </div>
+
+  <div class="navbar-right">
+      <a class="deactive" href="#help">Help</a>
+      <a class="deactive" href="#about">About</a>
+      <a class="active" href="#speechMain">Home</a>
+  </div>
+
+  <!------------------------------------End of Top Navigation bar------------------------------>
+
+  <!-------------------------------------------------Start of center page--------------------------------------->
+  <div style="margin-top:210px;" class="speechSection" id="speechMain" >
+
+    <!------------------------------Start of vertical navbar----------------------------->
+    <div class="icon-bar">
+
+      <button onclick="uploadFile()">
+        <span title="Upload Audio File">
+          <i class="large material-icons" >publish</i>
+        </span>
+      </button>
+      <button onclick="saveCache()">
+        <span title="Save data on browser">
+        <i class="large material-icons">save</i>
+        </span>
+      </button>
+      <button onclick="newSession()">
+        <span title="New Session">
+          <i class="large material-icons" >insert_drive_file</i>
+        </span>
+      </button>
+      <button onclick="saveFile()">
+        <span title="Download File as a text">
+          <i class="large material-icons">download</i>
+        </span>
+      </button>
+      <button onclick="printDiv()" >
+        <span title="Print">
+           <i class="large material-icons">print</i>
+        </span>
+      </button>
+      <button onclick="copyToClipboard()">
+        <span title="Copy to Clipboard">
+          <i class="large material-icons">content_copy</i>
+        </span>
+      </button>
+      <button onclick="clearAll()">
+        <span title="Clear All">
+            <i class="large material-icons">delete</i>
+        </span>
+      </button>
+      <button href="#info" onclick="">
+        <span title="Information's">
+            <i class="large material-icons">info</i>
+        </span>
+      </button>
+      <button href="#info" onclick="">
+        <span title="Information's">
+            <i class="large material-icons"></i>
+        </span>
+      </button>
+    </div>
+    <!------------------------End of vertical navbar------------------------------------>
+
+    <!-------------------------Start of the main page----------------------------------->
+    <div class="container" id="main" >
+      <!---------Start of Control Buttons------------>
+
+      <div>
+        <p id="status" class="lead mt-3 text-light" style="display: none">Listenting ...</p>
+        <button value="Start" onclick="if(status===true){start()} else if(status===false){pause()}" class="button">
+          <i class="fa fa-microphone"></i>
+        </button>
+      </div>
+      <!------------End of Control Buttons----------->
+
+      <!--------------Start of the form-------------->
+      <div class="buttonPage">
+        <button class="btn btn" id="but1" onclick="changePage()">Page1</button>
+      </div>
+
+      <div class="ui-input-container" id="editor1" style="display: block">
+        <label class="ui-form-input-container" >
+          <textarea placeholder="Your input comes here!" class="ui-form-input" id="output" ></textarea>
+          <span id="interim"></span>
+        </label>
+
+        <div class="alert " id="showAlert" role="alert">
+        </div>
+      </div>
+
+      <!---------------End of form---------------------->
+    </div>
+    <!-----------------------------End of the main---------------------------------------->
+
+    <!----------------------------------Start of right division-------------------------------->
+    <div class="section" style="overflow-x:auto;">
+
+      <!------------Start of the Tips Table---------->
+      <table>
+      <tr >
+          <td id="a_backspace">Back-Space</td>
+          <td></td>
+      </tr>
+      <tr >
+          <td id="a_tabspace">Tab-Space</td>
+          <td></td>
+      </tr>
+      <tr >
+          <td id="a_period">Period</td>
+          <td>.</td>
+      </tr>
+      <tr >
+          <td id="a_comma">Comma</td>
+          <td>,</td>
+      </tr>
+      <tr>
+          <td id="a_question">Question-mark</td>
+          <td>?</td>
+      </tr>
+      <tr>
+          <td id="a_colon">Colon</td>
+          <td>:</td>
+      </tr>
+      <tr >
+          <td id="a_semicolon">Semi-colon</td>
+          <td>;</td>
+      </tr >
+    </table>
+    <!-------------End of the Tips Table------------->
+    </div>
+    <!----------------------------End of right div--------------------------------------->
+  </div>
+  <!----------------------------End of center page section---------------------------------------->
+
+  <!----------------------------Start of the about section------------------------------------------>
+  <div class="aboutSection" id="about">
+    <h1>About Fiphy</h1>
+    <br>
+    <p>Fiphy is a website with online Notepad that allows it users to convert any audio to text. </p>
+    <p>It uses webkitSpeechRecognition from Javascript to transcribe audio to text.</p>
+  </div>
+  <!----------------------------End of the About section--------------------------------------------->
+
+  <!----------------------------Start of the New section-------------------------------------------->
+  <div class="sectionWhite" id="help">
+    <h2 class="h2ForSite"> New to Website?</h2>
+    <p> Click on the Mic button to start the Speech Recognition</p><br>
+    <p>For the first time only: Your browser will pop up a request for you to allow the site to listen to your mic. Click "Allow".</p>
+    <p>You can also convert your audio files into text.</p>
+    <p>There are many tools to ease transcription.<br>
+    <a>For more information swipe down.</a></p>
+    <p>In case if Fiphy is not working make sure you check following things.<br>
+      <a>
+        The website only works on Google Chrome and Safari Browsers for now.
+        You can use Mobile or PC for that.</a>
+    </p>
+  </div>
+  <!----------------------------End of the New section---------------------------------------------->
+
+  <!----------------------------Start of the Info section------------------------------------------->
+  <div class="info-section" id="info">
+    <h3>
+      <i class="large material-icons">info</i>
+      Information
+    </h3>
+    <div>
+      <a>
+        Fiphy offers users some functions to reduce their efforts
+      </a><br>
+
+      <i class="large material-icons" >publish</i>
+      <a>Don't Want to use mic?<br>&emsp;&nbsp;
+        Upload Mp3 Audio files to transcribe it.</a><br>
+
+      <i class="large material-icons" >save</i>
+      <a>Save the typed words in the browser cache.<br>&emsp;&nbsp;
+      You can always come back and the data will be stored here.</a><br>
+
+      <i class="large material-icons" >insert_drive_file</i>
+      <a>Want to transcribe on different idea without losing previous work?<br>&emsp;&nbsp;
+      Don't worry we got it covered.</a><br>
+
+      <i class="large material-icons" >download</i>
+      <a>Download you work as a Text file</a><br>
+
+      <i class="large material-icons" >print</i>
+      <a>Print your work </a><br>
+
+      <i class="large material-icons" >content_copy</i>
+      <a>Copy your work on clipboard</a><br>
+
+      <i class="large material-icons" >delete</i>
+      <a>Delete everything<br>&emsp;&nbsp;Start Fresh!</a><br>
+
+    </div>
+  </div>
+  <!----------------------------End of the Info section------------------------------------------>
+
+  <!----------------------------Start of the Tips section----------------------------------------->
+  <div class="sectionWhite" id="tips">
+    <h2 class="h2ForSite">Tips</h2>
+    <ul>
+       <li>
+        Speak slowly and clearly in the mic.
+      </li>
+      <li>
+        Make sure your room is quiet with less background noise.
+      </li>
+      <li>
+        The table on the right provides extra feature to the user to help them Transcribe.
+        <a>For Example: Speak Period to put a full stop(.)</a>
+      </li>
+    </ul>
+  </div>
+  <!----------------------------End of the Tips section----------------------------------------->
+
+  <!----------------------------Start of the footer-------------------------------------------------->
+  <footer id="foot">
+    <div class="nameAndLogo">
+      <h6>
+        Fiphy
+      </h6>
+      <br>
+      <a>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolore eius eveniet iure minus sed tempore. Nam nisi non praesentium quia sequi tenetur vitae.</a>
+    </div>
+    <div class="policy">
+      <h6>
+        Let's be Friends
+      </h6>
+      <ul class="list-inline mt-4">
+          <li class="list-offline-item"><a href="https://github.com/ayaan278" target="_blank" title="github"><i class="fa fa-github"></i>ayaan278</a></li>
+          <li class="list-offline-item"><a href="https://www.instagram.com/_.ayaanii._/" target="_blank" title="instagram"><i class="fa fa-instagram"></i>_.ayaanii._</a></li>
+        <li class="list-offline-item"><a href="mailto:ayaanishere08@gmail.com" target="_blank" title="gmail"><i class="fa fa-envelope-open-o"></i>ayaanishere08@gmail.com</a></li>
+      </ul>
+    </div>
+    <div class="comments">
+      <h6>
+        Have any Suggestion?
+      </h6>
+      <form method="post" class="suggestion" id="myForm" action="">
+        {% csrf_token %}
+        {{ form }}
+        <div class="leftName">
+          <label>
+            <input type="text" placeholder="Name" name="name" required >
+          </label>
+        </div>
+        <div class="rightSubmit">
+          <input type="submit" value="Send">
+        </div>
+        <div class="bottomSuggest">
+          <label>
+            <textarea type="text" placeholder="Comments" name="suggestions" ></textarea>
+          </label>
+        </div>
+      </form>
+    </div>
+    <div id="lastSection">
+        <a> Designed and Developed with love by Ayaan Ahmad</a>
+    </div>
+  </footer>
+  <!--------------------------End of footers section------------------------------------------------->
+
+</body>
+<!-------------------------------------------------End of body---------------------------------------->
+
+</html>
+<!---------------------------------------------------End of HTML---------------------------------------------->
