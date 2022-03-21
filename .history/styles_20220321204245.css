@@ -12,9 +12,13 @@ h1{
     color: white;
  }
 .h2ForSite {
-    text-align: right;
+    text-align: center;
     padding-top: 10px;
     color: white;
+}
+p{
+    text-align: center;
+    font-weight: 400;
 }
 i{
     display: inline-block;
@@ -96,7 +100,7 @@ i{
 .icon-bar {
     width: 8%;
     height: 100%;
-    background-color: #005ea2;
+    background-color: #7a9dde;
     position: static;
     float:left;
     overflow: visible;
@@ -111,7 +115,7 @@ i{
     border: none;
     outline: none;
     background: transparent;
-    color: white;
+    color: #000000;
     position: relative;
     transition: all 0.5s;
     z-index: 1;
@@ -124,7 +128,7 @@ i{
     left: 0;
     width: 5px;
     height: 100%;
-    background-color: #FEFFFF;
+    background-color: #000000;
     z-index: -1;
     transition: all 0.5s;
 }
@@ -134,9 +138,12 @@ i{
 }
 
 .icon-bar button:hover {
-    color: #150050;
+    color: white;
 }
 
+.icon-bar button:active:before {
+    background: #b9b9b9;
+}
 .icon-bar button:focus{
     outline: none;
 }
@@ -148,7 +155,7 @@ i{
     padding: 2px 30px 30px 30px;
     width: 67%;
     height: 100%;
-    background-color: #005ea2;
+    background-color: #7a9dde;
     border-collapse: collapse;
     display: block;
     margin: 0 auto;
@@ -185,7 +192,7 @@ i{
     transform: translate(0%, 0%);
     width: 100%;
     height: 100%;
-    background: #150050;
+    background: #005ea2;
     border-radius: 50px 50px;
 }
 
@@ -276,13 +283,10 @@ textarea {
     display: block;
     margin: 0 auto;
     float: right;
-    color: white;
+    color: #000000;
 }
 #tips{
     padding-top: 20px;
-}
-#tips h2{
-    text-align: center;
 }
 #tips p{
     padding: 2px 3px 5px 3px;
@@ -300,24 +304,20 @@ textarea {
     background-color: transparent;
     color: white;
     width:100%;
-    height: 220px;
     border: 2px transparent;
     display: none;
    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-.aboutSection h2,p{
-    text-align: left;
 }
 /*------------------------End of the About Section--------------- */
 
 /*------------------------Start of the Help and Tips section--------------*/
 .sectionWhite {
     width: 100%;
-    height: 380px;
-    padding: 50px;
+    height: 350px;
+    padding: px ;
     overflow: hidden;
-    background: #005ea2;
+    background: transparent;
     display: none;
     -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -326,7 +326,6 @@ textarea {
     font-size:16px;
     font-weight: 400;
     color:white;
-    text-align: right ;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -338,7 +337,7 @@ textarea {
     height: 400px;
     padding: 50px;
     margin-top: 0px auto;
-    background:#003380;
+    background:#005EA2;
     color: white;
     overflow: hidden;
     display: none;
@@ -402,6 +401,5 @@ textarea {
     padding: 2px 0 10px 0;
     color: white;
     overflow: hidden;
-    text-align: center;
 }
 /* ------------------------End of footer styles------------------------------- */

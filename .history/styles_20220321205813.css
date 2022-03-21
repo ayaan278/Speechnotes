@@ -111,7 +111,7 @@ i{
     border: none;
     outline: none;
     background: transparent;
-    color: white;
+    color: #000000;
     position: relative;
     transition: all 0.5s;
     z-index: 1;
@@ -124,7 +124,7 @@ i{
     left: 0;
     width: 5px;
     height: 100%;
-    background-color: #FEFFFF;
+    background-color: #000000;
     z-index: -1;
     transition: all 0.5s;
 }
@@ -134,9 +134,12 @@ i{
 }
 
 .icon-bar button:hover {
-    color: #150050;
+    color: white;
 }
 
+.icon-bar button:active:before {
+    background: #b9b9b9;
+}
 .icon-bar button:focus{
     outline: none;
 }
@@ -276,13 +279,10 @@ textarea {
     display: block;
     margin: 0 auto;
     float: right;
-    color: white;
+    color: #000000;
 }
 #tips{
     padding-top: 20px;
-}
-#tips h2{
-    text-align: center;
 }
 #tips p{
     padding: 2px 3px 5px 3px;
