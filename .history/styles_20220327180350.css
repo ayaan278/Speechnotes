@@ -16,9 +16,9 @@ h1{
     padding-top: 10px;
     color: white;
 }
-p{
-    font-size: 18px;
-}
+* {
+    box-sizing: border-box;
+  }
 i{
     display: inline-block;
 }
@@ -26,6 +26,16 @@ i{
     color:green;
 }
 /*------------------------end of body-----------------------*/
+ @media only screen and (max-width: 500px){
+     #tips{
+        width:100%;
+     }
+ }
+ @media only screen and (max-width:800px) {
+     #tips{
+         width:100%
+     }
+ }
 
 /*----------------------Top navigation Styles----------------- */
 
@@ -245,6 +255,7 @@ textarea {
     display: block;
     margin: 0 auto;
     float: right;
+    overflow: hidden;
     color: white;
 }
 #tips{
@@ -263,7 +274,7 @@ textarea {
 .aboutSection {
     padding: 50px;
     text-align: center;
-    background-color: #003380;
+    background-color: #150050;
     color: white;
     width:100%;
     height: 400px;
@@ -272,12 +283,10 @@ textarea {
    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-.aboutSection h2,p,a{
+.aboutSection h2,p{
     text-align: left;
 }
-
 /*------------------------End of the About Section--------------- */
-
 
 /*------------------------Start of info section------------------*/
 .info-section {
@@ -289,13 +298,15 @@ textarea {
     color: white;
     overflow: hidden;
     display: none;
+    text-align: center;
     -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-.info-section a{
+#info i, a{
     padding-bottom: 99999px;
     margin-bottom: -99999px;
     font-size: 20px;
+    text-align: right;
 }
 /*-------------------------End of info section--------------------*/
 
@@ -349,6 +360,8 @@ textarea {
     padding: 2px 0 10px 0;
     color: white;
     overflow: hidden;
+}
+.info p{
     text-align: center;
 }
 /* ------------------------End of footer styles------------------------------- */

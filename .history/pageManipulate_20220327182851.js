@@ -16,7 +16,8 @@ function animate() {
     document.getElementById("about").style.display="inline-block";
   }
   if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
-    document.getElementById("info").style.display="table";
+    // document.getElementById("info").style.display="table";
+    document.getElementById("empty").style.display="table";
   }
   if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700){
     document.getElementById("foot").style.display="inline-block";

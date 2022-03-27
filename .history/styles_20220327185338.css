@@ -16,9 +16,6 @@ h1{
     padding-top: 10px;
     color: white;
 }
-p{
-    font-size: 18px;
-}
 i{
     display: inline-block;
 }
@@ -273,9 +270,9 @@ textarea {
     animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 .aboutSection h2,p,a{
+    
     text-align: left;
 }
-
 /*------------------------End of the About Section--------------- */
 
 
@@ -285,7 +282,7 @@ textarea {
     height: 400px;
     padding: 50px;
     margin-top: 0px auto;
-    background:#005ea2;
+    background:#003380;
     color: white;
     overflow: hidden;
     display: none;

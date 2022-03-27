@@ -16,9 +16,6 @@ h1{
     padding-top: 10px;
     color: white;
 }
-p{
-    font-size: 18px;
-}
 i{
     display: inline-block;
 }
@@ -26,7 +23,11 @@ i{
     color:green;
 }
 /*------------------------end of body-----------------------*/
-
+ @media only screen and (max-width: 500px){
+     #tips{
+        width:100%;
+     }
+ }
 /*----------------------Top navigation Styles----------------- */
 
 #navbar {
@@ -50,6 +51,40 @@ i{
     color: white;
     -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.navbar-right {
+    float: right;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 0;
+    width: 100%;
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    background-color: #150050;
+
+}
+
+.navbar-right a
+{
+    float: right;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.navbar-right a:hover {
+    background-color: black;
+}
+
+.navbar-right a.deactive {
+    color: #FFFFFF;
 }
 
 /*----------------------End of top navigation bar--------------------- */
@@ -259,25 +294,47 @@ textarea {
 }
 /*------------------------End of main page styles-----------------------------*/
 
+#everything{
+    background-color: #003380;
+}
 /*------------------------Start of the About section--------------*/
 .aboutSection {
     padding: 50px;
     text-align: center;
-    background-color: #003380;
+    background-color: transparent;
     color: white;
     width:100%;
-    height: 400px;
+    height: 220px;
     border: 2px transparent;
     display: none;
    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-.aboutSection h2,p,a{
+.aboutSection h2,p{
     text-align: left;
 }
-
 /*------------------------End of the About Section--------------- */
 
+/*------------------------Start of the Help and Tips section--------------*/
+.sectionWhite {
+    width: 100%;
+    height: 380px;
+    padding: 50px;
+    overflow: hidden;
+    background: #005ea2;
+    display: none;
+    -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.sectionWhite p{
+    font-size:16px;
+    font-weight: 400;
+    color:white;
+    text-align: right ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*------------------------End of the help and tips Section--------------- */
 
 /*------------------------Start of info section------------------*/
 .info-section {
@@ -285,7 +342,7 @@ textarea {
     height: 400px;
     padding: 50px;
     margin-top: 0px auto;
-    background:#005ea2;
+    background:#003380;
     color: white;
     overflow: hidden;
     display: none;

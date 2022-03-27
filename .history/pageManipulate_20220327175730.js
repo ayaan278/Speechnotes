@@ -15,7 +15,7 @@ function animate() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("about").style.display="inline-block";
   }
-  if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+  if(document.body.scrollTop > 600 || document.documentElement.scrollTop > 600){
     document.getElementById("info").style.display="table";
   }
   if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700){

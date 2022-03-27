@@ -16,9 +16,6 @@ h1{
     padding-top: 10px;
     color: white;
 }
-p{
-    font-size: 18px;
-}
 i{
     display: inline-block;
 }
@@ -275,7 +272,6 @@ textarea {
 .aboutSection h2,p,a{
     text-align: left;
 }
-
 /*------------------------End of the About Section--------------- */
 
 
@@ -285,7 +281,7 @@ textarea {
     height: 400px;
     padding: 50px;
     margin-top: 0px auto;
-    background:#005ea2;
+    background:#003380;
     color: white;
     overflow: hidden;
     display: none;

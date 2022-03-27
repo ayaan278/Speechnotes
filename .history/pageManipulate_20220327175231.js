@@ -12,13 +12,16 @@ function animate() {
     document.getElementById("logo").style.textAlign = "center";
   }
 
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     document.getElementById("about").style.display="inline-block";
   }
-  if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+  if(document.body.scrollTop > 00 || document.documentElement.scrollTop > 300){
+    document.getElementById("help").style.display="inline-block";
+  }
+  if(document.body.scrollTop > 650 || document.documentElement.scrollTop > 650){
     document.getElementById("info").style.display="table";
   }
-  if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700){
+  if(document.body.scrollTop > 800 || document.documentElement.scrollTop > 800){
     document.getElementById("foot").style.display="inline-block";
   }
 }

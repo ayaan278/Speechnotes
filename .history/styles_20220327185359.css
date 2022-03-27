@@ -17,7 +17,7 @@ h1{
     color: white;
 }
 p{
-    font-size: 18px;
+    font
 }
 i{
     display: inline-block;
@@ -285,7 +285,7 @@ textarea {
     height: 400px;
     padding: 50px;
     margin-top: 0px auto;
-    background:#005ea2;
+    background:#003380;
     color: white;
     overflow: hidden;
     display: none;
