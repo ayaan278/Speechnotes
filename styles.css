@@ -351,4 +351,8 @@ textarea {
     overflow: hidden;
     text-align: center;
 }
+.info p {
+	text-align: center:
+	font-size:12px;
+}
 /* ------------------------End of footer styles------------------------------- */
