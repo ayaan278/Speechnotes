@@ -1,6 +1,6 @@
 # Speechnotes.github.io
 
-This website converts audio to text.
+This website converts audio to text, using JavaScript webkitSpeechRecognition.
 
 The code have good documentation for the coders to improve and change any elements.
 
