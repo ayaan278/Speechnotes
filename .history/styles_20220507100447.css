@@ -283,6 +283,7 @@ textarea {
 }
 .aboutSection p,a{
     font-size: 1.25em;
+    overflow: hidden;
 }
 
 /*------------------------End of the About Section--------------- */

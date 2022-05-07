@@ -28,9 +28,9 @@ i{
 /*------------------------end of body-----------------------*/
 
 
-@media screen and (max-width: 500px){
+@media only screen and (min-width: 768px){
     #tips{
-        width: 100%;
+        width: 25%;
     }
 }
 /*----------------------Top navigation Styles----------------- */
@@ -252,7 +252,8 @@ textarea {
     margin: 0 auto;
     float: right;
     color: white;
-    overflow: hidden;
+}
+#tips{
     padding-top: 20px;
 }
 #tips h2{
@@ -274,16 +275,13 @@ textarea {
     height: 400px;
     border: 2px transparent;
     display: block;
-    overflow: hidden;
-   /* -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
+   -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 .aboutSection h2,p,a{
     text-align: left;
 }
-.aboutSection p,a{
-    font-size: 1.25em;
-}
+.ab
 
 /*------------------------End of the About Section--------------- */
 
@@ -298,8 +296,8 @@ textarea {
     color: white;
     overflow: hidden;
     display: block;
-    /* -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
+    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 .info-section a{
     padding-bottom: 99999px;
@@ -319,8 +317,8 @@ textarea {
     position:relative;
     display:block;
     overflow: hidden;
-	/* -webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
+	-webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 .friends {
     display: absolute;

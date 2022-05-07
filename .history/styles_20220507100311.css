@@ -248,11 +248,13 @@ textarea {
     background-image: url('circle-scatter-haikei.svg');
     background-repeat: no-repeat;
     background-size: wrap;
-    display: block;
+    display: ;
     margin: 0 auto;
     float: right;
     color: white;
     overflow: hidden;
+}
+#tips{
     padding-top: 20px;
 }
 #tips h2{
@@ -274,7 +276,6 @@ textarea {
     height: 400px;
     border: 2px transparent;
     display: block;
-    overflow: hidden;
    /* -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
 }
