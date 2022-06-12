@@ -1,16 +1,20 @@
 import React from 'react'
+import { Textarea, Heading, Flex, Link, HStack, VStack,
+  FormLabel,
+ } from '@chakra-ui/react';
 
 const Form = () => {
   return (
-    <div class="ui-input-container" id="editor1" style="display: block">
-        <label class="ui-form-input-container" >
-          <textarea placeholder="Your input comes here!" class="ui-form-input" id="output" ></textarea>
-          <span id="interim"></span>
-        </label>
-
-        <div class="alert " id="showAlert" role="alert">
-        </div>
-      </div>
+    <VStack id="editor1">
+        <HStack>
+          <FormLabel >
+            <Textarea placeholder="Your input comes here!" id="output" ></Textarea>
+            <span id="interim"></span>
+          </FormLabel>
+        </HStack>
+        <HStack id="showAlert" role="alert">
+        </HStack>
+      </VStack>
   )
 }
 

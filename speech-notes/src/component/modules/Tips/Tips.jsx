@@ -1,13 +1,16 @@
 import React from 'react'
+import {Heading, HStack, VStack, } from '@chakra-ui/react';
 
 const Tips = () => {
   return (
-    <div class="container-xl" id="tips">
-    <h2 class="h2ForSite" >Tips</h2>
-    <p> Click on the Mic button to start the Speech Recognition</p>
-    <p> Speak slowly and clearly in the mic.</p>
-    <p> Make sure your room is quiet with less background noise.</p>
-</div>
+    <HStack class="container-xl" id="tips">
+      <VStack>
+        <Heading >Tips</Heading>
+        <Heading> Click on the Mic button to start the Speech Recognition</Heading>
+        <Heading> Speak slowly and clearly in the mic.</Heading>
+        <Heading> Make sure your room is quiet with less background noise.</Heading>
+      </VStack>
+    </HStack>
   )
 }
 

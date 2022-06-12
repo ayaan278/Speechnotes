@@ -1,10 +1,9 @@
-var pageNo=1;
 //----------------------------------------------------------------------------------------
-function uploadFile() {
+export function uploadFile() {
 
 }
 //----------------------------------------------------------------------------------------
-function saveCache() {
+export function saveCache() {
     let output = document.getElementById("output").value;
     if(output!==""){
         localStorage.setItem("text",output);
@@ -36,7 +35,7 @@ window.onload = () => {
     output.innerHTML = text;
 }
 //----------------------------------------------------------------------------------------
-function newSession() {
+export function newSession() {
 
 
 
@@ -50,7 +49,7 @@ function newSession() {
     },3000);
 }
 //----------------------------------------------------------------------------------------
-function saveFile(){
+export function saveFile(){
     	
     const msg = document.getElementById("output").value;
     let data = 'Fiphy: ' + msg;
@@ -81,7 +80,7 @@ function saveFile(){
     },3000);
 }
 //----------------------------------------------------------------------------------------
-function printDiv() {
+export function printDiv() {
     let divContents = document.getElementById("output").value;
     let a = window.open('', '', 'height=500, width=500');
     a.document.write('<html>');
@@ -102,7 +101,7 @@ function printDiv() {
 }
 //----------------------------------------------------------------------------------------
 
-function copyToClipboard(){
+export function copyToClipboard(){
     let copyText = document.getElementById("output");
 
     copyText.select();
@@ -120,7 +119,7 @@ function copyToClipboard(){
     },3000);
 }
 //----------------------------------------------------------------------------------------
-function clearAll() {
+export function clearAll() {
     alert("Are you sure you want to clear all of your work");
     document.getElementById("output").value = "";
 

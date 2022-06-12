@@ -1,15 +1,19 @@
 import React from 'react'
-import { Center, Container, HStack, Heading} from '@chakra-ui/react'
+import { Flex, HStack, Heading} from '@chakra-ui/react'
 
 const Header = () => {
+
   return (
-    <Center>
-      <Container>
+    <Flex as="header" w="100%"
+    wrap="wrap"
+    p={7}
+    bg="#000000"
+    color='white'
+    justifyContent={'Center'}>
         <HStack>
           <Heading>Speech Notes</Heading>
         </HStack>
-      </Container>
-    </Center>
+    </Flex>
   )
 }
 
