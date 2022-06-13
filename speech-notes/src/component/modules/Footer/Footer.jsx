@@ -11,13 +11,12 @@ const Footer = () => {
     as="footer" 
     color='white'
     h="5em">
-        <HStack w="100%" bg="black">
-
+        <HStack w="100%" bg="black" p="0.5em">
           <HStack w="60%" >
             <Heading fontSize={{base: 'xs',md: 'xs',lg: 'sm'}} pl="2em"> Copyright &copy; Ayaan Ahmad</Heading>
           </HStack>
 
-          <HStack w="40%" gap="1em" pt="1em">
+          <HStack w="40%" gap="1em">
             <Link>
               <span size='md' class="inline-block h-12 w-12 rounded-full ring-white">
                 <FaFacebook  style={{fontSize: '30px'}}/>

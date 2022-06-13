@@ -2,19 +2,31 @@ import React from 'react'
 import { Textarea, Heading, Flex, Link, HStack, VStack,
   FormLabel,
  } from '@chakra-ui/react';
+ import MicButton from '../../elements/MicButton/MicButton'
 
 const Form = () => {
   return (
-    <VStack id="editor1">
+    <HStack id="editor1" w="100%">
+      <VStack w="100%" h="400px">
         <HStack>
-          <FormLabel >
-            <Textarea placeholder="Your input comes here!" id="output" ></Textarea>
-            <span id="interim"></span>
+          <FormLabel color="white" alignItems="left">
+            Click on the mic to start the recognition  
           </FormLabel>
+          <MicButton/>
         </HStack>
-        <HStack id="showAlert" role="alert">
-        </HStack>
+        <Textarea placeholder="Your input comes here!" 
+                    id="output" 
+                    resize="none"
+                    size='lg'
+                    bg="white"
+                    border="2px solid black"
+                    h="300px"
+                    ></Textarea>
+          <span id="interim"></span>
       </VStack>
+    </HStack>
+        // <HStack id="showAlert" role="alert">
+        // </HStack>
   )
 }
 
