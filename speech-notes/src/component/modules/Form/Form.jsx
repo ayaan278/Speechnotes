@@ -6,7 +6,7 @@ import { Textarea, Heading, Flex, Link, HStack, VStack,
 
 const Form = () => {
   return (
-    <HStack id="editor1" w="100%">
+    <HStack w="100%">
       <VStack w="100%" h="400px">
         <HStack>
           <FormLabel color="white" alignItems="left">
@@ -18,7 +18,7 @@ const Form = () => {
                     id="output" 
                     resize="none"
                     size='lg'
-                    bg="white"
+                    bg="#fffffe"
                     border="2px solid black"
                     h="300px"
                     ></Textarea>

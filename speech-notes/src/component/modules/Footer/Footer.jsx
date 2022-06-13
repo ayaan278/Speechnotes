@@ -9,14 +9,14 @@ const Footer = () => {
     wrap="wrap"
     w="100%"
     as="footer" 
-    color='white'
+    color='#7f5af0'
     h="5em">
-        <HStack w="100%" bg="black" p="0.5em">
-          <HStack w="60%" >
+        <HStack w="100%" bg="#010101" p="0.5em">
+          <HStack w="55%" >
             <Heading fontSize={{base: 'xs',md: 'xs',lg: 'sm'}} pl="2em"> Copyright &copy; Ayaan Ahmad</Heading>
           </HStack>
 
-          <HStack w="40%" gap="1em">
+          <HStack w="45%" gap="1em" p="0.2em">
             <Link>
               <span size='md' class="inline-block h-12 w-12 rounded-full ring-white">
                 <FaFacebook  style={{fontSize: '30px'}}/>

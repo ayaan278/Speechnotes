@@ -1,12 +1,16 @@
 import React from 'react'
 import { Button } from '@chakra-ui/react'
+import { BsFillMicFill } from "react-icons/bs";
+// import { speech } from "../../modules/Form/speechRecognition"
 const MicButton = () => {
   return (
     <Button value="Start" 
-      // onclick={
-      // if(status==true){start()} else if(status===false){pause()}} class="button"
+        bg="#00C6C2"
+        color="#fffffe"
+        // onclick={speech}
+        //  class="button"
       >
-          Button
+          <BsFillMicFill/>
     </Button>
   )
 }

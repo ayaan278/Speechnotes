@@ -1,8 +1,3 @@
-//----------------------------------------------------------------------------------------
-export function uploadFile() {
-
-}
-//----------------------------------------------------------------------------------------
 export function saveCache() {
     let output = document.getElementById("output").value;
     if(output!==""){
@@ -36,8 +31,6 @@ window.onload = () => {
 }
 //----------------------------------------------------------------------------------------
 export function newSession() {
-
-
 
     let al=document.getElementById("showAlert");
 
@@ -100,7 +93,6 @@ export function printDiv() {
     },3000);
 }
 //----------------------------------------------------------------------------------------
-
 export function copyToClipboard(){
     let copyText = document.getElementById("output");
 
@@ -133,3 +125,6 @@ export function clearAll() {
     },3000);
 }
 //----------------------------------------------------------------------------------------
+export function alert(){
+    alert("Are you sure you want to clear all of your work");
+}

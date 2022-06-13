@@ -7,7 +7,7 @@ const Header = () => {
     <Flex as="header" w="100%"
     wrap="wrap"
     p={7}
-    bg="#000000"
+    bg="#7f5af0"
     color='white'
     justifyContent={'Center'}>
         <HStack>

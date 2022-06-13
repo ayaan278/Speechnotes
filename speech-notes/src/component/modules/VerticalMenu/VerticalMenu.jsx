@@ -1,42 +1,36 @@
 import React from 'react'
-import Menu from './MenuFunction'
-import { VStack, Button, Center, Container} from '@chakra-ui/react'
-
+import { saveCache, saveFile, printDiv, copyToClipboard, clearAll, } from './MenuFunction'
+import MenuBotton from '../../elements/MenuButton/MenuBotton'
+import { VStack, Center, Container} from '@chakra-ui/react'
+import { TbDeviceFloppy, TbDownload, TbClipboardText} from "react-icons/tb";
+import { BiPrinter } from "react-icons/bi";
+import { RiDeleteBinLine, RiInformationFill } from "react-icons/ri";
 const VerticalMenu = () => {
+  function alert(){
+    alert("Are you sure you want to clear all of your work");
+}
   return (
     <Center >
       <Container maxW="container.sm">
         <VStack p="1em" w="100%">
-            <Button onclick="saveCache()">
-                <span title="Save data on browser">
-                    <i class="fa fa-floppy-o"></i>
-                </span>
-            </Button>
-            <Button onclick="saveFile()">
-                <span title="Download File as a text">
-                    <i class="fa fa-download"></i>
-                </span>
-            </Button>
-            <Button onclick="printDiv()">
-                <span title="Print">
-                    <i class="fa fa-print"></i>
-                </span>
-            </Button>
-              <Button onclick="copyToClipboard()">
-                <span title="Copy to Clipboard">
-                    <i class="fa fa-clipboard"></i>
-                </span>
-              </Button>
-              <Button onclick="clearAll()">
-                  <span title="Clear All">
-                    <i class="fa fa-trash-o"></i>
-                  </span>
-              </Button>
-              <Button onclick="">
-                <span title="Information's">
-                    <i class="fa fa-info-circle"></i>
-                </span>
-              </Button>
+            <MenuBotton functionName={saveCache} 
+                        title="Save data on browser"
+                        icon={<TbDeviceFloppy/>}/>
+            <MenuBotton functionName={saveFile} 
+                        title="Download File as a text"
+                        icon={<TbDownload/>}/>
+            <MenuBotton functionName={printDiv} 
+                        title="Print"
+                        icon={<BiPrinter/>}/>
+            <MenuBotton functionName={copyToClipboard} 
+                        title="Copy to Clipboard"
+                        icon={<TbClipboardText/>}/>
+            <MenuBotton functionName={clearAll} 
+                        title="Save data on browser"
+                        icon={<RiDeleteBinLine/>}/>
+            <MenuBotton functionName={alert}
+                        title="Information about Icons"
+                        icon={<RiInformationFill/>}/>
         </VStack>
       </Container>
     </Center>
