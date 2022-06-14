@@ -125,6 +125,3 @@ export function clearAll() {
     },3000);
 }
 //----------------------------------------------------------------------------------------
-export function alert(){
-    alert("Are you sure you want to clear all of your work");
-}

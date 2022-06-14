@@ -7,7 +7,7 @@ const SpeechSection = () => {
   return (
     <Center bg="#16161a" pt="2em">
             <Stack w="100%" align="center" direction={[ 'column', 'row']}>
-              <HStack>
+              <HStack w="70%">
                 <VStack w="8%">
                     <VerticalMenu/>
                 </VStack>
