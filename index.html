@@ -10,6 +10,7 @@
     <link href="/dist/output.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,8 +50,8 @@
   <!------------------------------------End of Top Navigation bar------------------------------>
 
   <!-------------------------------------------------Start of center page--------------------------------------->
-  <div style="margin-top:210px;" class="speechSection" id="speechMain" >
-
+  <div style="margin-top:210px;" class="flex flex-col md:flex-row" id="speechMain" >
+    <div class="basis-9/12">
     <!------------------------------Start of vertical navbar----------------------------->
     <div class="icon-bar">
       <button onclick="saveCache()">
@@ -113,10 +114,10 @@
       <!---------------End of form---------------------->
     </div>
     <!-----------------------------End of the main---------------------------------------->
-    
+  </div>
     <!----------------------------Start of the Tips section----------------------------------------->
-    <div class="container-xl" id="tips">
-        <h2 class="h2ForSite" >Tips</h2>
+    <div class="basis-3/12 items-center" id="tips">
+        <h2 class="items-center" >Tips</h2>
         <p> Click on the Mic button to start the Speech Recognition</p>
         <p> Speak slowly and clearly in the mic.</p>
         <p> Make sure your room is quiet with less background noise.</p>
@@ -126,8 +127,8 @@
   <!----------------------------End of center page section---------------------------------------->
 
   <!----------------------------Start of the about section------------------------------------------>
-  <div class="aboutSection" id="about">
-    <div class="w-3/6">
+  <div class="flex flex-col sm:flex-row justify-content-evenly " id="about">
+    <div class="p-2">
       <h2 class="text-3xl font-bold underline">About</h2>
       <br>
       <p>Speech Notes is a website with online Notepad that allows it users to convert any audio to text. </p>
@@ -139,41 +140,48 @@
           You can use Mobile or PC for that.</p>
       </p>
     </div>
-    <div class="w-3/6">
-      <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_tzv8osvb.json"  
-      background="transparent"  speed="1"  
-      style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+    <div class="p-2">
+      <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_nmrwmvic.json"  
+      background="transparent"  speed="1"  style="width: 300px; height: 300px; border-radius: 50px;"  
+      loop  autoplay></lottie-player>
     </div>
   </div>
   <!----------------------------End of the About section--------------------------------------------->
 
   <!----------------------------Start of the Info section------------------------------------------->
-  <div class="info-section" id="info">
-    <h3>
-      <i class="fa fa-info-circle"></i>
-      Information
-    </h3>
-    <div>
-      <a>
-        Speech Recognition offers users some functions to reduce their efforts
-      </a><br><br>
-
-      <i class="fa fa-floppy-o fa-2x" ></i>
-      <a>&emsp;Save the typed words in the browser cache.<br>
-
-      <i class="fa fa-download fa-lg" ></i>
-      <a>&emsp;Download you work as a Text file</a><br>
-
-      <i class="fa fa-print fa-2x" ></i>
-      <a>&emsp;Print your work </a><br>
-
-      <i class="fa fa-clipboard fa-2x" ></i>
-      <a>&emsp;Copy your work on clipboard</a><br>
-
-      <i class="fa fa-trash-o fa-2x" ></i>
-      <a>&emsp;Delete everything<br></a><br>
-
+  <div class= "flex flex-col md:flex-row justify-content-evenly" id="info">
+    <div class="p-2">
+      <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_tzv8osvb.json"  
+      background="transparent"  speed="1"  
+      style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
     </div>
+    <div class="p-2">
+      <h3>
+        <i class="fa fa-info-circle"></i>
+        Information
+      </h3>
+      <div>
+        <a>
+          Speech Recognition offers users some functions to reduce their efforts
+        </a><br><br>
+
+        <i class="fa fa-floppy-o fa-2x" ></i>
+        <a>&emsp;Save the typed words in the browser cache.<br>
+
+        <i class="fa fa-download fa-lg" ></i>
+        <a>&emsp;Download you work as a Text file</a><br>
+
+        <i class="fa fa-print fa-2x" ></i>
+        <a>&emsp;Print your work </a><br>
+
+        <i class="fa fa-clipboard fa-2x" ></i>
+        <a>&emsp;Copy your work on clipboard</a><br>
+
+        <i class="fa fa-trash-o fa-2x" ></i>
+        <a>&emsp;Delete everything<br></a><br>
+
+      </div>
+    </div>  
   </div>
   <!----------------------------End of the Info section------------------------------------------>
   

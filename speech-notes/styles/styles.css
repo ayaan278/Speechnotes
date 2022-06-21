@@ -14,11 +14,6 @@ h1{
     margin-top: 5px;
     color: white;
  }
-.h2ForSite {
-    text-align: right;
-    padding-top: 10px;
-    color: white;
-}
 p{
     font-size: 18px;
 }
@@ -63,10 +58,10 @@ i{
 
 /*----------------------End of top navigation bar--------------------- */
 
-.speechSection {
+#speechMain {
     background-color: #16161a;
     width: 100%;
-    height: 450px;
+    height: auto;
 	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
@@ -103,7 +98,7 @@ i{
     left: 0;
     width: 5px;
     height: 100%;
-    background-color: #FEFFFF;
+    background-color: #7f5af0;
     z-index: -1;
     transition: all 0.5s;
 }
@@ -124,8 +119,8 @@ i{
 /*--------------------------Start of main section styles---------------------*/
 #main{
     float: left;
-    padding: 2px 30px 30px 30px;
-    width: 67%;
+    padding: 2px 30px;
+    width: 90%;
     height: 100%;
     background-color: transparent;
     border-collapse: collapse;
@@ -164,7 +159,7 @@ i{
     transform: translate(0%, 0%);
     width: 100%;
     height: 100%;
-    background: #150050;
+    background: #7f5af0;
     border-radius: 50px 50px;
 }
 
@@ -248,12 +243,12 @@ textarea {
 
 #tips {
     height: 100%;
-    width: 25%;
+    padding: 5px;
     background-image: url('/speech-notes/assets/circle-scatter-haikei.svg');
     background-repeat: no-repeat;
     background-size: wrap;
     display: block;
-    margin: 0 auto;
+    margin: 5px auto;
     float: right;
     color: #00C6C2;
     overflow: hidden;
@@ -270,7 +265,7 @@ textarea {
 /*------------------------End of main page styles-----------------------------*/
 
 /*------------------------Start of the About section--------------*/
-.aboutSection {
+#about {
     padding: 50px;
     text-align: center;
     background-color: #16161a;
@@ -283,10 +278,10 @@ textarea {
    /* -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
 }
-.aboutSection h2,p,a{
+#about h2,p,a{
     text-align: left;
 }
-.aboutSection p,a{
+#about p,a{
     font-size: 1.25em;
 }
 
@@ -294,7 +289,7 @@ textarea {
 
 
 /*------------------------Start of info section------------------*/
-.info-section {
+#info {
     width: 100%;
     height: auto;
     padding: 50px;
@@ -306,7 +301,7 @@ textarea {
     /* -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
 }
-.info-section a{
+#info a{
     padding-bottom: 99999px;
     margin-bottom: -99999px;
     font-size: 1.25em;
@@ -337,7 +332,7 @@ textarea {
     font-size:16px;
 }
 .friends .contact a{
-    color: #7a9dde;
+    color: #ffffee;
 }
 .friends ul{
     font-size: 20px;
