@@ -217,6 +217,7 @@ i{
     border-radius: 4px;
     border: 2px solid #000000;
     outline: 0;
+    padding: 5px;
     width: 100%;
     resize: none;
     background-color: #fffffe;
@@ -243,7 +244,6 @@ textarea {
 
 #tips {
     height: 100%;
-    padding: 5px;
     background-image: url('/speech-notes/assets/circle-scatter-haikei.svg');
     background-repeat: no-repeat;
     background-size: wrap;
@@ -252,7 +252,6 @@ textarea {
     float: right;
     color: #00C6C2;
     overflow: hidden;
-    padding-top: 20px;
 }
 #tips h2{
     text-align: center;
@@ -273,7 +272,7 @@ textarea {
     width:100%;
     height: auto;
     border: 2px transparent;
-    display: block;
+    display: flex;
     overflow: hidden;
    /* -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
@@ -297,7 +296,7 @@ textarea {
     background:#16161a;
     color: #00C6C2;
     overflow: hidden;
-    display: block;
+    display: flex;
     /* -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
 }
